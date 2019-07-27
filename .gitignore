@@ -1,8 +1,8 @@
 node_modules
-lib
-.tmp
-*.js
+dist
 
 yarn-error.log
 *.png
 *.jpg
+*.js
+*.zip
