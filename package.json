@@ -4,9 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node dist/index.js",
     "debug": "ts-node src/index.ts",
-    "build": "tsc src/index.ts"
+    "build": "tsc --outDir ./dist src/index.ts",
+    "createZip": "zip -r out.zip dist/ node_modules/"
   },
   "devDependencies": {
     "@types/node-fetch": "^2.5.0",
