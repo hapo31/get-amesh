@@ -1,5 +1,8 @@
 node_modules
-yarn-error.log
 lib
 .tmp
 *.js
+
+yarn-error.log
+*.png
+*.jpg
