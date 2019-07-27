@@ -1,0 +1,21 @@
+{
+  "name": "amesh-get",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/index.js",
+    "debug": "ts-node src/index.ts",
+    "build": "tsc src/index.ts"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.5.0",
+    "@types/sharp": "^0.22.2",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.0",
+    "sharp": "^0.22.1"
+  }
+}
