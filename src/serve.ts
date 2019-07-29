@@ -12,7 +12,7 @@ app.get("/amesh", async (req, res, next) => {
 
   if (image) {
     res.header("Content-Type", "image/png");
-    res.write(image);
+    res.send(image);
   } else {
     res.status(500);
   }
