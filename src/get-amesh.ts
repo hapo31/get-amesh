@@ -1,11 +1,13 @@
 import fetch from "node-fetch";
-import sharp = require("sharp");
+import sharp from "sharp";
 
 const ameshPrefix = "https://tokyo-ame.jwa.or.jp/mesh/000/";
 const mapUrl = "https://tokyo-ame.jwa.or.jp/map/map000.jpg";
 const maskUrl = "https://tokyo-ame.jwa.or.jp/map/msk000.png";
 
-export default async function getAmesh(date: Date) {
+export default async function getAmesh(
+  date: Date
+): Promise<Buffer | undefined> {
   // 時間が5分刻みの直後すぎると画像がサーバーで生成されてないっぽいので最大10分前の画像を取るようにする
   const nowStr = dateStr(new Date(date.getTime() - 5 * 60 * 1000));
   try {
@@ -26,6 +28,8 @@ export default async function getAmesh(date: Date) {
   } catch (e) {
     console.error(e);
   }
+
+  return undefined;
 }
 
 function dateStr(date: Date): string {
